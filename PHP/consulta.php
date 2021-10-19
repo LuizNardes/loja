@@ -71,6 +71,7 @@ $cat= $_POST["nCategoria"];
                 . "</td><td>" . descricaoCategoria($campo['idcategoria']) 
                 . "</td><td>" . $campo['preco'] 
                 . "</td><td>" . $campo['quantidade'] 
+                . "</td><td>Alterar / <a href=''>Excluir</a>"
                 ."</td></tr>";
                   
                 }
@@ -78,8 +79,8 @@ $cat= $_POST["nCategoria"];
         }
     
         echo $lista; 
-   
-
 
 
 ?>
+<br>
+<button><a href="../index.php">Voltar</a></button>
