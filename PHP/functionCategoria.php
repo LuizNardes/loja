@@ -48,14 +48,15 @@ function descricaoCategoria($id){
 
 
     //Montar meu comando SQL
-    $sql = "SELECT * FROM categorias WHERE idcategoria = $id" ;    
+    $sql = "SELECT * FROM categorias WHERE id_categoria = $id" ;    
+
+    // var_dump($sql);
+    // die();
 
     $result = mysqli_query($conn, $sql); 
     mysqli_close($conn);    
 
     $lista ="";
-    // var_dump($lista);
-    // die();
     //Valida se retornou linha
     if (mysqli_num_rows($result) > 0){       
 
