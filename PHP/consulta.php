@@ -7,12 +7,6 @@ $cat= $_POST["nCategoria"];
 
 
 
-
-//Chamda de Função: Consultar parâmetros no BD
-$result = consulta($cadastro, $descricao, $categoria);
-
-//Declaração de Função
-function consulta($cadastro, $descricao, $categoria){
         //Conexão ao BD
         include("conexao.php");
     
