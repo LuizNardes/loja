@@ -1,6 +1,5 @@
 <?php
-    include('functionCategoria.php');
-    include('functionProduto.php');
+    include('php/function.php');
     
 ?>
 <!DOCTYPE html>
@@ -13,7 +12,7 @@
 
 <body>
     
-<form method="POST" action="php/salvarProduto.php?acao=A">
+<form method="POST" action="php/salvarProduto.php?acao=A&id=<?php echo $_GET['id']; ?>">
     <p>
         <label for="iCadastro">ID</label>
         <input type="number" id="iCadastro" name="nCadastro" readonly value="<?php echo $_GET['id']; ?>">
@@ -24,15 +23,15 @@
     </p>
     <p>
         <label for="iPreco">Preço (R$)</label>
-        <input type="number" step=".01" min="0" id="iPreco" name="nPreco">
+        <input type="number" step=".01" min="0" id="iPreco" name="nPreco" value="<?php echo precoProduto($_GET['id']); ?>">
     </p>
     <p>
         <label for="iQtd">Quantidade</label>
-        <input type="number" id="iQtd" name="nQtd">
+        <input type="number" id="iQtd" name="nQtd" value="<?php echo qtdProduto($_GET['id']); ?>">
     </p>
     <p>
         <select name="nCategoria" id="iCategoria">
-            <option value="0">Todas</option>
+            <option value="<?php echo categoriaProduto($_GET['id'])?>"><?php echo descricaoCategoria(categoriaProduto($_GET['id']))?></option>
             <?php echo lista_categorias();  ?>
         </select>
     </p>

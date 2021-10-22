@@ -31,6 +31,8 @@
         <input type="submit" value="Consultar">
     </p>
 </form>
+<button><a href='novo-produto.php'>Novo Produto</a></button>
+    
 
 
 

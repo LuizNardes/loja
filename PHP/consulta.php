@@ -76,7 +76,7 @@ $cat= $_POST["nCategoria"];
                 . "</td><td>" . $campo['preco'] 
                 . "</td><td>" . $campo['quantidade'] 
                 . "</td><td>"
-                ."<a href='alterar-produto.php?id=".$campo['idproduto']."' >Alterar</a> "
+                ."<a href='../alterar-produto.php?id=".$campo['idproduto']."' >Alterar</a> "
                 ." / <a href='excluirProduto.php?id=".$campo['idproduto']."'>Excluir</a>" 
                 ."</td></tr>";
 
@@ -92,3 +92,4 @@ $cat= $_POST["nCategoria"];
 ?>
 <br>
 <button><a href='../index.php'>Voltar</a></button>
+<button><a href='../novo-produto.php'>Novo Produto</a></button>

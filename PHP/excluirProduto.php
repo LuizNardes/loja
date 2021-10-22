@@ -12,5 +12,5 @@ $sql="DELETE FROM produtos WHERE idproduto = ".$id.";";
 $result = mysqli_query($conn,$sql);
 mysqli_close($conn);
 
-
+header('location: consulta.php');
 ?>

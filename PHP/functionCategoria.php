@@ -1,6 +1,6 @@
 <?php
 
-//Preencher OPTIONS de um select
+//Preencher OPTIONS de um select---------------------------------------------------------------------------------------------
 function lista_categorias(){
 
     
@@ -39,7 +39,7 @@ function lista_categorias(){
     return $lista; 
 }
 
-//Função para buscar descrição de categoria:
+//Função para buscar descrição de categoria-----------------------------------------------------------------------------------
 function descricaoCategoria($id){
 
 
@@ -56,7 +56,7 @@ function descricaoCategoria($id){
     $result = mysqli_query($conn, $sql); 
     mysqli_close($conn);    
 
-    $lista ="";
+    $descricao ="";
     //Valida se retornou linha
     if (mysqli_num_rows($result) > 0){       
 
@@ -71,13 +71,13 @@ function descricaoCategoria($id){
 
             //Validar dados 
             foreach($array as $campo){                    
-                  $lista = $campo['descricao'];
+                  $descricao = $campo['descricao'];
             }
 
         
     }
 
-    return $lista; 
+    return $descricao; 
 }
 
 
